@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — An Album a Day</title>
+    <meta name="description" content="Privacy Policy for An Album a Day, a music discovery app by Tycho Station.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #F5F5F0;
+            color: #2C3E50;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 48px 0 32px;
+            border-bottom: 1px solid #E0DED8;
+            margin-bottom: 40px;
+        }
+
+        .header-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-link:hover .app-icon-wrapper {
+            transform: scale(1.05);
+        }
+
+        .app-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.12);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .app-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .app-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #1ABC9C;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 16px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #16A085;
+        }
+
+        /* Legal content */
+        .legal-content {
+            padding-bottom: 48px;
+        }
+
+        .legal-content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2C3E50;
+        }
+
+        .legal-meta {
+            font-size: 0.9rem;
+            color: #8895A3;
+            margin-bottom: 36px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #2C3E50;
+        }
+
+        .legal-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #2C3E50;
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            color: #3D4F5F;
+        }
+
+        .legal-content ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+            color: #3D4F5F;
+        }
+
+        .legal-content strong {
+            color: #2C3E50;
+        }
+
+        .legal-content a {
+            color: #1ABC9C;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+
+        .legal-content th {
+            background-color: #2C3E50;
+            color: #F5F5F0;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .legal-content th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .legal-content th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .legal-content td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #E0DED8;
+            color: #3D4F5F;
+        }
+
+        .legal-content tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        .legal-content tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .legal-content tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #E0DED8;
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: #2C3E50;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #1ABC9C;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #8895A3;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 36px 0 24px;
+            }
+
+            .legal-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.15rem;
+            }
+
+            .legal-content table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <a href="index.html" class="header-link">
+                <div class="app-icon-wrapper">
+                    <img src="icon.png" alt="An Album a Day app icon">
+                </div>
+                <span class="app-title">An Album a Day</span>
+            </a>
+            <br>
+            <a href="index.html" class="back-link">&larr; Back to home</a>
+        </header>
+
+        <!-- Content -->
+        <main class="legal-content">
+            <h1>Privacy Policy</h1>
+            <p class="legal-meta">Effective Date: March 15, 2026 &middot; Last Updated: March 15, 2026</p>
+
+            <h2>Overview</h2>
+            <p>An Album a Day ("the App") is a music discovery app that recommends one album per day based on your listening preferences. This privacy policy explains what information the App collects, how it is used, and your choices regarding that information.</p>
+            <p>The App is operated by Tycho Station ("we", "us", "our"). If you have questions about this policy, contact us at <a href="mailto:albumaday.contact@gmail.com">albumaday.contact@gmail.com</a>.</p>
+
+            <h2>Information We Collect</h2>
+
+            <h3>Information You Provide</h3>
+            <ul>
+                <li><strong>Music preferences:</strong> Album names, artist names, ratings (1-10), written notes, and track-level reactions you enter while using the App</li>
+                <li><strong>Onboarding information:</strong> Albums and artists you tell us about during setup to calibrate your recommendations</li>
+                <li><strong>Preference settings:</strong> Your preferred music era, discovery style, excluded artists, and any custom instructions you provide to the recommendation engine</li>
+                <li><strong>Taste question answers:</strong> Occasional short questions about your music taste, which you can skip at any time</li>
+                <li><strong>Error reports:</strong> If you choose to report a bug, the report includes technical error details and any context you provide. This is sent via your device's email app and is entirely optional.</li>
+            </ul>
+
+            <h3>Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device identifier:</strong> A randomly generated ID (UUID) created the first time you open the App. This is not linked to your name, email, Apple ID, or Google account. It is used solely for rate limiting (ensuring fair usage of the recommendation service). Reinstalling the App generates a new ID.</li>
+                <li><strong>Advertising identifier:</strong> If you have personalized ads enabled on your device, Google AdMob may access your device's Advertising ID to serve and measure ads. You can reset or disable this ID in your device settings.</li>
+                <li><strong>Server logs:</strong> Our backend server logs API requests for operational monitoring. Logs include the device identifier, the API endpoint called, response status, and timestamp. Logs are retained for 30 days and then automatically deleted.</li>
+            </ul>
+
+            <h3>Information We Do Not Collect</h3>
+            <ul>
+                <li>We do not collect your name, email address, phone number, or any account credentials</li>
+                <li>We do not require you to create an account</li>
+                <li>We do not collect your location</li>
+                <li>We do not access your contacts, photos, microphone, or camera</li>
+                <li>We do not use third-party analytics services (no Firebase Analytics, no Mixpanel, etc.)</li>
+            </ul>
+
+            <h2>How Your Information Is Used</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>What</th>
+                        <th>How It's Used</th>
+                        <th>Who Processes It</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Music preferences &amp; history</td>
+                        <td>Sent to Google Gemini AI to generate personalized album recommendations and taste profiles</td>
+                        <td>Google (Gemini API) via our backend server</td>
+                    </tr>
+                    <tr>
+                        <td>Device identifier</td>
+                        <td>Rate limiting to ensure fair service usage</td>
+                        <td>Our backend server</td>
+                    </tr>
+                    <tr>
+                        <td>Album/artist names</td>
+                        <td>Searched on Spotify to retrieve album artwork and listening links</td>
+                        <td>Spotify (via our backend server)</td>
+                    </tr>
+                    <tr>
+                        <td>Advertising identifier</td>
+                        <td>Serving ads and measuring ad performance</td>
+                        <td>Google AdMob</td>
+                    </tr>
+                    <tr>
+                        <td>Server logs</td>
+                        <td>Monitoring service health and detecting abuse</td>
+                        <td>Our backend server (internal use only)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Third-Party Services</h2>
+            <p>The App uses the following third-party services, each of which has its own privacy policy:</p>
+            <ul>
+                <li><strong>Google Gemini AI</strong> &mdash; Processes your music history and preferences to generate recommendations. <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google AI Privacy Policy</a></li>
+                <li><strong>Google AdMob</strong> &mdash; Serves banner, interstitial, and rewarded video ads. AdMob may use your Advertising ID and device information to personalize ads. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Ads Privacy Policy</a></li>
+                <li><strong>Spotify Web API</strong> &mdash; Used server-side to look up album artwork and listening links. No user data is sent to Spotify; only album/artist names from AI recommendations are searched. <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify Privacy Policy</a></li>
+                <li><strong>Expo Updates</strong> &mdash; Used to deliver over-the-air app updates. <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo Privacy Policy</a></li>
+            </ul>
+
+            <h2>Data Storage</h2>
+            <ul>
+                <li><strong>On your device:</strong> All your music data (reviews, ratings, notes, preferences, taste profile) is stored in a local SQLite database on your device. This data is not accessible to other apps and is deleted if you uninstall the App.</li>
+                <li><strong>On our server:</strong> Only your device identifier and API request logs are stored server-side. We do not store your music history, ratings, or preferences on our server &mdash; that data is sent to the AI for processing and is not retained by us after the response is generated.</li>
+                <li><strong>Data export:</strong> You can export all your data as a JSON file at any time from the Settings screen.</li>
+            </ul>
+
+            <h2>Data Retention</h2>
+            <ul>
+                <li><strong>On-device data:</strong> Retained until you delete it within the App or uninstall the App</li>
+                <li><strong>Server logs:</strong> Automatically deleted after 30 days</li>
+                <li><strong>Rate limiting records:</strong> Stored in server memory only; cleared on server restart or after the rate limit window expires (typically 48 hours)</li>
+            </ul>
+
+            <h2>Your Choices</h2>
+            <ul>
+                <li><strong>Ad personalization:</strong> You can opt out of personalized ads through your device settings (iOS: Settings &gt; Privacy &gt; Tracking; Android: Settings &gt; Google &gt; Ads)</li>
+                <li><strong>Data deletion:</strong> You can delete all your data at any time using the "Clear All Data" option in the App's Settings screen. This removes everything from the on-device database.</li>
+                <li><strong>Data export:</strong> You can export a copy of all your data from Settings before deleting it</li>
+                <li><strong>Error reports:</strong> Bug reports are entirely optional and user-initiated</li>
+            </ul>
+
+            <h2>Children's Privacy</h2>
+            <p>The App is not directed at children under 13. We do not knowingly collect information from children under 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:albumaday.contact@gmail.com">albumaday.contact@gmail.com</a>.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. We will update the "Last Updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>Contact</h2>
+            <p>If you have questions or concerns about this privacy policy, contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:albumaday.contact@gmail.com">albumaday.contact@gmail.com</a></p>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <nav class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="mailto:albumaday.contact@gmail.com">Contact</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 Tycho Station. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

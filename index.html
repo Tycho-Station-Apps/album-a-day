@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Album a Day — Discover Music You'll Love</title>
+    <meta name="description" content="Discover one perfect album every day, tailored to your taste. An Album a Day is a free music discovery app for iOS and Android.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #F5F5F0;
+            color: #2C3E50;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 64px 0 24px;
+        }
+
+        .app-icon-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            overflow: hidden;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+        }
+
+        .app-icon-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .app-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2C3E50;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .title-word {
+            padding: 2px 12px;
+            border-radius: 8px;
+            color: #FFFFFF;
+        }
+
+        .title-word-an { background-color: #F1C40F; }
+        .title-word-album { background-color: #E74C3C; }
+        .title-word-a { background-color: #1ABC9C; }
+        .title-word-day { background-color: #2C3E50; }
+
+        .app-tagline {
+            font-size: 1.2rem;
+            color: #5D6D7E;
+            font-weight: 400;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Features */
+        .features {
+            padding: 16px 0 48px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .feature-title-mustard { color: #D4A017; }
+        .feature-title-coral { color: #E74C3C; }
+        .feature-title-mint { color: #1ABC9C; }
+        .feature-title-slate { color: #2C3E50; }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #5D6D7E;
+            line-height: 1.5;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+            padding: 48px 0;
+        }
+
+        .cta-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+        }
+
+        .cta-btn-primary {
+            background-color: #2C3E50;
+            color: #F5F5F0;
+        }
+
+        .cta-btn-secondary {
+            background-color: #FFFFFF;
+            color: #2C3E50;
+            border: 2px solid #2C3E50;
+        }
+
+        .cta-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #E0DED8;
+            padding: 32px 0;
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: #2C3E50;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #1ABC9C;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #8895A3;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 48px 0 20px;
+            }
+
+            .app-icon-wrapper {
+                width: 96px;
+                height: 96px;
+                border-radius: 22px;
+            }
+
+            .app-title {
+                font-size: 1.8rem;
+                gap: 6px;
+            }
+
+            .title-word {
+                padding: 1px 8px;
+                border-radius: 6px;
+            }
+
+            .app-tagline {
+                font-size: 1.05rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="app-icon-wrapper">
+                <img src="icon.png" alt="An Album a Day app icon">
+            </div>
+            <h1 class="app-title">
+                <span class="title-word title-word-an">An</span>
+                <span class="title-word title-word-album">Album</span>
+                <span class="title-word title-word-a">a</span>
+                <span class="title-word title-word-day">Day</span>
+            </h1>
+            <p class="app-tagline">Discover one perfect album every day, tailored to your taste</p>
+        </header>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">&#127926;</span>
+                    <h3 class="feature-title feature-title-mustard">Daily Discovery</h3>
+                    <p class="feature-desc">One handpicked album recommendation every day, chosen just for you</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">&#127919;</span>
+                    <h3 class="feature-title feature-title-mint">Tailored to You</h3>
+                    <p class="feature-desc">Recommendations that learn from your ratings and evolve with your taste</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">&#128214;</span>
+                    <h3 class="feature-title feature-title-coral">Build Your Journal</h3>
+                    <p class="feature-desc">Rate albums, write notes, and build a personal listening history</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">&#127911;</span>
+                    <h3 class="feature-title feature-title-slate">Listen Instantly</h3>
+                    <p class="feature-desc">One tap to open any recommendation in Spotify and start listening</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <p class="cta-label">Coming Soon</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-btn cta-btn-primary" aria-label="Download on the App Store (coming soon)">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    App Store
+                </a>
+                <a href="#" class="cta-btn cta-btn-secondary" aria-label="Get it on Google Play (coming soon)">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.67c-.37-.2-.63-.57-.63-1.02V1.35C2.55.57 3.36.12 4.03.49l9.63 5.27L3.18 23.67zm.84-22.39L15.62 12 4.02 22.72V1.28zm1.44-.01L17.22 11l1.73-.95L7.07.56l-1.61.71zm12.87 10.1l-2.12 1.16L14.09 12l2.12 1.16 2.12 1.16c.67.37.67 1.3 0 1.67L5.37 23.44l10.48-10.28-2.12-1.16 2.12-1.16 2.48-1.36c.67-.37.67-1.3 0-1.67l-2.48-1.36z"/></svg>
+                    Google Play
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <nav class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="mailto:albumaday.contact@gmail.com">Contact</a>
+            </nav>
+            <p class="footer-copy">&copy; 2026 Tycho Station. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
